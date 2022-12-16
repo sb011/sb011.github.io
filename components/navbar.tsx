@@ -14,6 +14,9 @@ const Navbar = () => {
                 <li className={styles.li}>
                     <Link className={styles.link} href="#education">Education</Link>
                 </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href="#experience">Experience</Link>
+                </li>
             </ul>
         </div>
     )
