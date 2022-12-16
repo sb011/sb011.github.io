@@ -17,6 +17,9 @@ const Navbar = () => {
                 <li className={styles.li}>
                     <Link className={styles.link} href="#experience">Experience</Link>
                 </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href="#skills">Skills</Link>
+                </li>
             </ul>
         </div>
     )
