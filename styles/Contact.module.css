@@ -1,0 +1,89 @@
+.container{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 5rem;
+}
+
+.title {
+    margin: 1rem 0 4rem 0;
+    font-size: 4rem;
+    text-decoration: underline;
+    text-decoration-color: #E04345;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 70%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.label {
+    font-size: 1.5rem;
+}
+
+.star {
+    color: #E04345;
+}
+
+.input, .input:focus {
+    border: none;
+    border-bottom: 1.5px solid #E04345;
+    outline: none;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.input2 {
+    border: none;
+    border-bottom: 1.5px solid #E04345;
+    outline: none;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    width: 100%;
+    height: 7rem;
+}
+
+.err {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color:#ed3d40;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.btn {
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    width: 20%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    transition: 0.5s all ease-in-out;
+}
+
+.btn:hover {
+    background-color: #E04345;
+    color: black;
+}

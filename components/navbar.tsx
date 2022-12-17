@@ -20,6 +20,12 @@ const Navbar = () => {
                 <li className={styles.li}>
                     <Link className={styles.link} href="#skills">Skills</Link>
                 </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href="#projects">Projects</Link>
+                </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href="#contact">Contact Me</Link>
+                </li>
             </ul>
         </div>
     )
