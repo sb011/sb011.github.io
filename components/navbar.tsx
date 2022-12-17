@@ -26,6 +26,9 @@ const Navbar = () => {
                 <li className={styles.li}>
                     <Link className={styles.link} href="#contact">Contact Me</Link>
                 </li>
+                <li className={styles.li}>
+                    <Link className={styles.link} href="#personal">Personal Details</Link>
+                </li>
             </ul>
         </div>
     )
