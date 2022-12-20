@@ -35,7 +35,7 @@ const Projects = () => {
                                                     })
                                                 }
                                             </div>
-                                            <h1 className={styles.getmore}><a className={styles.getmorelink} href={img.link}>Get more information</a></h1>
+                                            <h1 className={styles.getmore}><a className={styles.getmorelink} href={`/${img.id}`}>Get more information</a></h1>
                                         </div>
                                     </motion.div>
                                 )
@@ -47,5 +47,6 @@ const Projects = () => {
         </div>
     )
 }
+
 
 export default Projects

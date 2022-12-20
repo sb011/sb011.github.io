@@ -52,7 +52,7 @@ const Contact = () => {
                     <textarea className={styles.input2} name='msg' id='msg' placeholder='Enter your message' value={msg} onChange={handleInputChange} />
                 </div>
                 <p className={styles.err}>{err}</p>
-                <button type='submit' className={styles.btn}>Send the message</button>
+                <button type='submit' onClick={onSubmit} className={styles.btn}>Send the message</button>
             </div>
         </div>
     )

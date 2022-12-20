@@ -1,0 +1,150 @@
+.main {
+    display: flex;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 2rem 0 2rem 3rem;
+    font-size: 4rem;
+    text-decoration: underline;
+    text-decoration-color: #E04345;
+}
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.inner_carousel {
+    display: flex;
+}
+
+.item {
+    min-width: 45rem;
+    height: 30rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.projimg {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+    object-fit: contain;
+    /* position: relative; */
+    /* z-index: 1; */
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 3rem;
+}
+
+.Slink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* width: 10%; */
+    height: auto;
+}
+
+.git {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.logo {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.linktitle {
+    font-size: 2rem;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E04345;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.dates {
+    font-size: 2rem;
+}
+
+.skillslist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.s_list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.skills {
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    background: white;
+}
+
+.line {
+    width: 100%;
+    background: black;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 0;
+}
