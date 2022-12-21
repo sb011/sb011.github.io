@@ -2,13 +2,30 @@ import Typewriter from 'typewriter-effect'
 import styles from '../styles/Home.module.css'
 import ImgSrc from '../public/profile_pic.jpg'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 const AboutMe = () => {
+    useEffect(() => {
+        const timer = setTimeout(() => {
+
+        }, 4000)
+        return () => clearTimeout(timer)
+    }, [])
+
     return (
         <div id='top' className={styles.mainContainer}>
-            <div className={styles.imgContainer}>
+            <motion.div
+                className={styles.imgContainer}
+                animate={{
+                    scale: 1,
+                    transition: {
+                        duration: 1,
+                    }
+                }}
+            >
                 <Image className={styles.img} src={ImgSrc} alt="Profile Pic"/>
-            </div>
+            </motion.div>
             <div className={styles.me}>
                 <div className={styles.line1}>
                     <Typewriter options={{

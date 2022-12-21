@@ -18,7 +18,7 @@ const Navbar = () => {
                     <Link className={styles.link} href="#experience">Experience</Link>
                 </li>
                 <li className={styles.li}>
-                    <Link className={styles.link} href="#skills">Skills</Link>
+                    <Link className={styles.link} href="#skills&certificates">Skills & Certificates</Link>
                 </li>
                 <li className={styles.li}>
                     <Link className={styles.link} href="#projects">Projects</Link>
@@ -26,9 +26,9 @@ const Navbar = () => {
                 <li className={styles.li}>
                     <Link className={styles.link} href="#contact">Contact Me</Link>
                 </li>
-                <li className={styles.li}>
+                {/* <li className={styles.li}>
                     <Link className={styles.link} href="#personal">Personal Details</Link>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

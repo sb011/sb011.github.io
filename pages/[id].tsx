@@ -30,6 +30,9 @@ const Project = (props: any) => {
     const id = props.id
     const [info, setInfo] = useState<proj>()
 
+    const [functionalitiesLength, setFunctionalitiesLength] = useState<any>(0);
+    const [stepsLength, setStepsLength] = useState<any>(0);
+
     const [width, setWidth] = useState(0)
     const carousel = useRef<any>(null)
 
@@ -38,8 +41,11 @@ const Project = (props: any) => {
     })
 
     useEffect(() => {
-        const res = projects.find(p => id === p.id)
+        const res = projects.find(p => id === p.id);
         setInfo(res);
+        setFunctionalitiesLength(res?.functionalities?.length)
+        setStepsLength(res?.steps_to_start?.length)
+        console.log()
     }, [])
 
     return (
@@ -80,40 +86,65 @@ const Project = (props: any) => {
                     </div>
                     <div className={styles.line}></div>
                 </div>
-                <div>
-                    {
-                        info?.description.map(d => {
-                            return (
-                                <p>{d}</p>
-                            )
-                        })
-                    }
+                <div className={styles.frame2}>
+                    <h2 className={styles.sub_title}>Description</h2>
+                    <div className={styles.block4}>
+                        <div className={styles.des_block}>
+                        {
+                            info?.description.map(d => {
+                                return (
+                                    <p className={styles.val}>{d}</p>
+                                )
+                            })
+                        }
+                        </div>
+                        <div className={styles.block5}>
+                            <iframe 
+                                className={styles.video}
+                                src={info?.video}
+                                frameBorder='0' 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title='video'
+                            >
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    {
-                        info?.functionalities.map(func => {
-                            return (
-                                <span>{func}</span>
-                            )
-                        })
-                    }
-                </div>
-                <div>
-                    {
-                        info?.steps_to_start.map(sts => {
-                            return (
-                                <div>
-                                    <h1>{sts.no}</h1>
-                                    <h1>{sts.description}</h1>
-                                    <code>{sts.code}</code>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                {/* <img /> */}
-                {/* <video /> */}
-
+                {
+                    functionalitiesLength > 0 && 
+                    <div className={styles.frame}>
+                            <h2 className={styles.sub_title}>Functionalities{functionalitiesLength}</h2>
+                        <div className={styles.block2}>
+                        {
+                            functionalitiesLength > 0 && info?.functionalities?.map(func => {
+                                return (
+                                    <span className={styles.val}>{func}</span>
+                                    )
+                                })
+                        }
+                        </div>
+                    </div>
+                }
+                {
+                    stepsLength > 0 && 
+                    <div className={styles.frame}>
+                        <h2 className={styles.sub_title}>Steps</h2>
+                        <div className={styles.block3}>
+                        {
+                            stepsLength > 0 &&
+                            info?.steps_to_start?.map(sts => {
+                                return (
+                                    <div className={styles.code_span}>
+                                        <h1 className={styles.step_des}><span className={styles.step_no}>{sts.no}.</span>{sts.description}</h1>
+                                        <p className={styles.code_block}><code className={styles.code}>{sts.code}</code></p>
+                                    </div>
+                                )
+                            })
+                        }
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     )
