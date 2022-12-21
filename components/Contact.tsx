@@ -31,8 +31,8 @@ const Contact = () => {
 
     return (
         <div id='contact' className={styles.container}>
-            <h1 className={styles.title}>Contact me</h1>
-            <div className={styles.form}>
+            <h1 data-aos="fade-up" className={styles.title}>Contact me</h1>
+            <div data-aos="fade-up" className={styles.form}>
                 <div className={styles.info}>
                     <div className={styles.card}>
                         <label htmlFor='name' className={styles.label}>Name<span className={styles.star}>*</span></label>

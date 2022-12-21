@@ -13,8 +13,8 @@ const Projects = () => {
 
     return (
         <div id='projects' className={styles.container}>
-            <h1 className={styles.title}>Projects</h1>
-            <div className={styles.projects}>
+            <h1 data-aos="fade-up-right" className={styles.title}>Projects</h1>
+            <div data-aos="fade-up-left" className={styles.projects}>
                 <motion.div ref={carousel} className={styles.carousel}>
                     <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
                         {

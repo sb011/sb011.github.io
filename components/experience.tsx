@@ -7,9 +7,9 @@ import Link from 'next/link';
 const Experience = () => {
     return (
         <div id='experience' className={styles.excontainer}>
-            <h1 className={styles.title}>Experience</h1>
+            <h1 data-aos="zoom-out-right" className={styles.title}>Experience</h1>
             <div className={styles.parts}>
-                <div className={styles.card}>
+                <div data-aos="zoom-out-left" className={styles.card}>
                     <div className={styles.imgContainer}>
                         <Image className={styles.img} src={ImgSrc} alt="amazon logo"/>
                     </div>
@@ -30,7 +30,7 @@ const Experience = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.card}>
+                <div data-aos="zoom-out-left" className={styles.card}>
                     <div className={styles.imgContainer}>
                         <Image className={styles.img} src={ImgSrc2} alt="jpmc logo"/>
                     </div>

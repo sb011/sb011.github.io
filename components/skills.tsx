@@ -20,8 +20,8 @@ const Skills = () => {
         <div id='skills&certificates' className={styles.container}>
             <div className={styles.main}>
                 <div className={styles.skill}>
-                    <h1 className={styles.title}>Skills</h1>
-                    <div className={styles.cont}>
+                    <h1 data-aos="zoom-in-up" className={styles.title}>Skills</h1>
+                    <div data-aos="zoom-in-down" className={styles.cont}>
                         <div className={styles.logos}>
                             <div className={styles.card}>
                                 <Image className={styles.logo} src={Clang} alt='C++ logo' />
@@ -75,8 +75,8 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className={styles.certificates}>
-                    <h1 className={styles.title}>Certificates</h1>
-                    <div className={styles.content}>
+                    <h1 data-aos="zoom-in-up" className={styles.title}>Certificates</h1>
+                    <div data-aos="zoom-in-down" className={styles.content}>
                         <div className={styles.certificate}>
                             <div className={styles.certicard}>
                                 <Image className={styles.logo} src={MongoDB} alt='MongoDB logo' />
