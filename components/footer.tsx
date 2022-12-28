@@ -29,7 +29,7 @@ const Footer = () => {
                     <h1 className={styles.val}>Morbi, Gujarat, India</h1>
                 </div>
             </div>
-            <p className={styles.resume}>Want to see my <Link className={styles.resumelink} href='https://drive.google.com/file/d/1On78tn1v7F8YTw-tFLvctHi6hgFLpWaf/view?usp=share_link'>Resume</Link>?</p>
+            <p className={styles.resume}>Want to see my <Link className={styles.resumelink} href='https://drive.google.com/drive/folders/1_4crLqUCe9YD9mkvxfTgHSIzyp5oZcDV?usp=sharing' target='_blank'>Resume</Link>?</p>
             <div className={styles.socialcontainer}>
                 <div className={styles.social}>
                     <div className={styles.iconcontainer}>
@@ -80,6 +80,7 @@ const Footer = () => {
                 </div>
             </div>
             <p className={styles.slog}>Created by Smit Bhoraniya🤔🌚</p>
+            <p className={styles.version}>Version 1.0.0</p>
         </div>
     )
 }

@@ -7,6 +7,7 @@
     justify-content: center;
     padding: 4rem 5rem;
     /* margin: 4rem 0; */
+    overflow-x: hidden;
 }
 
 .title {
@@ -18,4 +19,12 @@
 
 .des {
     font-size: 2rem;
+}
+
+.high {
+    /* font-family: Custom2Font, monospace; */
+    /* text-transform: uppercase; */
+    font-weight: bold; 
+    text-decoration: underline;
+    text-decoration-color: #E04345;  
 }

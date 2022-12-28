@@ -5,6 +5,9 @@ import { motion } from 'framer-motion'
 import styles from '../styles/ProjectInfo.module.css'
 import Image from 'next/image';
 import GitHub from '../public/GitHub.svg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Router from 'next/router'
 
 type steps = {
     no: Number,
@@ -37,6 +40,14 @@ const Project = (props: any) => {
     const carousel = useRef<any>(null)
 
     useEffect(() => {
+        AOS.init({
+          mirror: true,
+          anchorPlacement: 'top-bottom',
+          duration: 1000,
+        });
+      }, [])
+
+    useEffect(() => {
         setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth )
     })
 
@@ -45,36 +56,40 @@ const Project = (props: any) => {
         setInfo(res);
         setFunctionalitiesLength(res?.functionalities?.length)
         setStepsLength(res?.steps_to_start?.length)
-        console.log()
     }, [])
 
     return (
         <div className={styles.main}>
             <div className={styles.container}>
-                <h1 className={styles.title}>{info?.name}</h1>
-                <motion.div ref={carousel} className={styles.carousel}>
-                    <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
-                        {
-                            info?.img.map(image => {
-                                return (
-                                    <motion.div className={styles.item}>
-                                        <img className={styles.projimg} src={image} alt='project photos' />
-                                    </motion.div>
-                                )
-                            })
-                        }
-                    </motion.div>
-                </motion.div>
-                <div className={styles.block}>
-                    <div className={styles.Slink}>
-                        <div className={styles.git}>
-                            <Image className={styles.logo} src={GitHub} alt='GitHub logo' />
-                        </div>
-                        <h2 className={styles.linktitle}><Link className={styles.link} href={`${info?.link}`} target='_blank'>Source Code</Link></h2>
+                <div>
+                    <div className={styles.header}>
+                        <div data-aos="fade-right" onClick={() => Router.back()} className={styles.back}>&lt;-</div>
+                        <h1 data-aos="fade-left" className={styles.title}>{info?.name}</h1>
                     </div>
-                    <h2 className={styles.dates}>{info?.start_date} - {info?.end_date}</h2>
+                    <motion.div data-aos="fade-left" ref={carousel} className={styles.carousel}>
+                        <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
+                            {
+                                info?.img.map(image => {
+                                    return (
+                                        <motion.div className={styles.item}>
+                                            <img className={styles.projimg} src={image} alt='project photos' />
+                                        </motion.div>
+                                    )
+                                })
+                            }
+                        </motion.div>
+                    </motion.div>
+                    <div data-aos="flip-down" className={styles.block}>
+                        <div className={styles.Slink}>
+                            <div className={styles.git}>
+                                <Image className={styles.logo} src={GitHub} alt='GitHub logo' />
+                            </div>
+                            <h2 className={styles.linktitle}><Link className={styles.link} href={`${info?.link}`} target='_blank'>Source Code</Link></h2>
+                        </div>
+                        <h2 className={styles.dates}>{info?.start_date} - {info?.end_date}</h2>
+                    </div>
                 </div>
-                <div className={styles.skillslist}>
+                <div data-aos="zoom-in" className={styles.skillslist}>
                     <div className={styles.s_list}>
                     {
                         info?.tech.map(skills => {
@@ -87,9 +102,9 @@ const Project = (props: any) => {
                     <div className={styles.line}></div>
                 </div>
                 <div className={styles.frame2}>
-                    <h2 className={styles.sub_title}>Description</h2>
+                    <h2 data-aos="zoom-in-right" className={styles.sub_title}>Description</h2>
                     <div className={styles.block4}>
-                        <div className={styles.des_block}>
+                        <div data-aos="zoom-in-right" className={styles.des_block}>
                         {
                             info?.description.map(d => {
                                 return (
@@ -98,7 +113,7 @@ const Project = (props: any) => {
                             })
                         }
                         </div>
-                        <div className={styles.block5}>
+                        <div data-aos="zoom-in-left" className={styles.block5}>
                             <iframe 
                                 className={styles.video}
                                 src={info?.video}
@@ -114,8 +129,8 @@ const Project = (props: any) => {
                 {
                     functionalitiesLength > 0 && 
                     <div className={styles.frame}>
-                            <h2 className={styles.sub_title}>Functionalities{functionalitiesLength}</h2>
-                        <div className={styles.block2}>
+                        <h2 data-aos="zoom-in-right" className={styles.sub_title}>Functionalities</h2>
+                        <div data-aos="zoom-in-left" className={styles.block2}>
                         {
                             functionalitiesLength > 0 && info?.functionalities?.map(func => {
                                 return (
@@ -129,8 +144,8 @@ const Project = (props: any) => {
                 {
                     stepsLength > 0 && 
                     <div className={styles.frame}>
-                        <h2 className={styles.sub_title}>Steps</h2>
-                        <div className={styles.block3}>
+                        <h2 data-aos="zoom-out-up" className={styles.sub_title}>Steps</h2>
+                        <div data-aos="zoom-out-up" className={styles.block3}>
                         {
                             stepsLength > 0 &&
                             info?.steps_to_start?.map(sts => {

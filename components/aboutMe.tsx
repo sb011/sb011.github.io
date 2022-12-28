@@ -2,8 +2,15 @@ import Typewriter from 'typewriter-effect'
 import styles from '../styles/Home.module.css'
 import ImgSrc from '../public/profile_pic.jpg'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 const AboutMe = () => {
+    const text = "Hey scroll down don't be shy";
+    // const words = []
+    // useEffect(() => {
+    //     text.split("").map()
+    // }, [])
+
     return (
         <div id='top' className={styles.mainContainer}>
             <div
@@ -51,6 +58,11 @@ const AboutMe = () => {
                     S<span className={styles.second_font}>MI</span>T B<span className={styles.second_font}>HORAN</span>I<span className={styles.second_font}>Y</span>A 
                 </div>
             </div>
+            {/* <div className={styles.circle}>
+                <div className={styles.text}>
+                    <p className={styles.p}></p>
+                </div>
+            </div> */}
         </div>
     )
 }
