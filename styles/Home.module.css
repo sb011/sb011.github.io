@@ -47,4 +47,25 @@
 
 .iam {
   font-size: 3rem;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1040px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    width: 100%;
+    /* order: 1; */
+  }
+
+  .me {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .iam {
+    font-size: 2rem;
+  }
 }

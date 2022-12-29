@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+
+import { useRef, useState } from 'react';
 
 const Contact = () => {
     const form = useRef<any>(null);

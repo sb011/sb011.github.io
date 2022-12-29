@@ -1,7 +1,8 @@
 import styles from '../styles/Projects.module.css'
+import images from './projectInfo'
+
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
-import images from './projectInfo'
 
 const Projects = () => {
     const [width, setWidth] = useState(0)

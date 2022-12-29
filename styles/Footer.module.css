@@ -2,6 +2,7 @@
     width: 100%;
     /* min-height: 100%; */
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 4rem 5rem 2rem 5rem;
     border-top: 2px solid black;
@@ -82,4 +83,42 @@
     text-align: center;
     font-size: 1rem;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 1040px) { 
+    .container {
+        padding: 1rem;
+    }
+    .info {
+        flex-direction: column;
+        text-align: center;
+    } 
+    .card{
+        font-size: 0.5rem;
+    }
+    .card:nth-child(2) {
+        margin-top: 1rem;
+    }
+
+    .resume {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    .social {
+        width: 80%;
+    }
+
+    .iconcontainer {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .icons{
+        border-radius: 3px;
+    }
+
+    .slog, .version {
+        font-size: 0.5rem;
+    }
 }

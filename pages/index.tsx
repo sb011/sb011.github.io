@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import AboutMe from '../components/aboutMe'
 import Navbar from '../components/navbar'
@@ -26,9 +25,10 @@ export default function Home() {
     <>
       <Head>
         <title>Smit's Portfolio</title>
+        <meta charSet="utf-8" />
         <meta name="description" content="Hello, I am Smit Bhoraniya, and everything about me is over here." />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <meta name="keywords" content="smit, smit's portfolio, portfolio" />
       </Head>
       <main className={styles.main}>
         <Navbar />

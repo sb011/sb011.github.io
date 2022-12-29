@@ -89,3 +89,45 @@
     background-color: #E04345;
     color: black;
 }
+
+@media screen and (max-width: 1040px) {
+    .container {
+        padding: 1rem;
+        min-height: auto;
+        margin: 1rem 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin: 1.8rem 0 1rem 0;
+    }
+
+    .info {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+
+    .input, .input:focus {
+        font-size: 1rem;
+        margin-top: 0;
+        padding: 0.6rem 0;
+    }
+
+    .card {
+        margin-top: 0.6rem;
+    }
+
+    .err {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

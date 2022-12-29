@@ -1,13 +1,17 @@
 import Link from 'next/link';
-import { useEffect, useState, useRef } from 'react';
 import projects from '../components/projectInfo'
-import { motion } from 'framer-motion'
 import styles from '../styles/ProjectInfo.module.css'
 import Image from 'next/image';
 import GitHub from '../public/GitHub.svg'
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Router from 'next/router'
+import Head from 'next/head'
+
+import { useEffect, useState, useRef } from 'react';
+import { motion } from 'framer-motion'
+
+import 'aos/dist/aos.css';
+
 
 type steps = {
     no: Number,
@@ -26,7 +30,7 @@ type proj = {
     steps_to_start: Array<steps>,
     tech: Array<string>,
     img: Array<string>,
-    video: String
+    video?: string
 }
 
 const Project = (props: any) => { 
@@ -59,109 +63,121 @@ const Project = (props: any) => {
     }, [])
 
     return (
-        <div className={styles.main}>
-            <div className={styles.container}>
-                <div>
-                    <div className={styles.header}>
-                        <div data-aos="fade-right" onClick={() => Router.back()} className={styles.back}>&lt;-</div>
-                        <h1 data-aos="fade-left" className={styles.title}>{info?.name}</h1>
+        <>
+            <Head>
+                <title>Smit's Portfolio</title>
+                <meta charSet="utf-8" />
+                <meta name="description" content="Hello, I am Smit Bhoraniya, and everything about me is over here." />
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+                <meta name="keywords" content="smit, smit's portfolio, portfolio" />
+            </Head>
+            <div className={styles.main}>
+                <div className={styles.container}>
+                    <div>
+                        <div className={styles.header}>
+                            <div data-aos="fade-right" onClick={() => Router.back()} className={styles.back}>&lt;-</div>
+                            <h1 data-aos="fade-left" className={styles.title}>{info?.name}</h1>
+                        </div>
+                        <motion.div data-aos="fade-left" ref={carousel} className={styles.carousel}>
+                            <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
+                                {
+                                    info?.img.map((image, index) => {
+                                        return (
+                                            <motion.div className={styles.item} key={index}>
+                                                <img className={styles.projimg} src={image} alt='project photos' />
+                                            </motion.div>
+                                        )
+                                    })
+                                }
+                            </motion.div>
+                        </motion.div>
+                        <div data-aos="flip-down" className={styles.block}>
+                            <div className={styles.Slink}>
+                                <div className={styles.git}>
+                                    <Image className={styles.logo} src={GitHub} alt='GitHub logo' />
+                                </div>
+                                <h2 className={styles.linktitle}><Link className={styles.link} href={`${info?.link}`} target='_blank'>Source Code</Link></h2>
+                            </div>
+                            <h2 className={styles.dates}>{info?.start_date} - {info?.end_date}</h2>
+                        </div>
                     </div>
-                    <motion.div data-aos="fade-left" ref={carousel} className={styles.carousel}>
-                        <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
+                    <div data-aos="zoom-in" className={styles.skillslist}>
+                        <div className={styles.s_list}>
+                        {
+                            info?.tech.map((skills, index) => {
+                                return (
+                                    <span key={index} className={styles.skills}>{skills}</span>
+                                )
+                            })
+                        }
+                        </div>
+                        <div className={styles.line}></div>
+                    </div>
+                    <div className={styles.frame2}>
+                        <h2 data-aos="zoom-in-right" className={styles.sub_title}>Description</h2>
+                        <div className={styles.block4}>
+                            <div data-aos="zoom-in-right" className={styles.des_block}>
                             {
-                                info?.img.map(image => {
+                                info?.description.map((d, index) => {
                                     return (
-                                        <motion.div className={styles.item}>
-                                            <img className={styles.projimg} src={image} alt='project photos' />
-                                        </motion.div>
+                                        <p key={index} className={styles.val}>{d}</p>
                                     )
                                 })
                             }
-                        </motion.div>
-                    </motion.div>
-                    <div data-aos="flip-down" className={styles.block}>
-                        <div className={styles.Slink}>
-                            <div className={styles.git}>
-                                <Image className={styles.logo} src={GitHub} alt='GitHub logo' />
                             </div>
-                            <h2 className={styles.linktitle}><Link className={styles.link} href={`${info?.link}`} target='_blank'>Source Code</Link></h2>
+                            {
+                                info?.video &&
+                                <div data-aos="zoom-in-left" className={styles.block5}>
+                                    <iframe 
+                                        className={styles.video}
+                                    src={info?.video}
+                                        frameBorder='0' 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        title='video'
+                                    >
+                                    </iframe>
+                                </div>
+                            }
                         </div>
-                        <h2 className={styles.dates}>{info?.start_date} - {info?.end_date}</h2>
                     </div>
-                </div>
-                <div data-aos="zoom-in" className={styles.skillslist}>
-                    <div className={styles.s_list}>
                     {
-                        info?.tech.map(skills => {
-                            return (
-                                <span className={styles.skills}>{skills}</span>
-                            )
-                        })
-                    }
-                    </div>
-                    <div className={styles.line}></div>
-                </div>
-                <div className={styles.frame2}>
-                    <h2 data-aos="zoom-in-right" className={styles.sub_title}>Description</h2>
-                    <div className={styles.block4}>
-                        <div data-aos="zoom-in-right" className={styles.des_block}>
-                        {
-                            info?.description.map(d => {
-                                return (
-                                    <p className={styles.val}>{d}</p>
-                                )
-                            })
-                        }
-                        </div>
-                        <div data-aos="zoom-in-left" className={styles.block5}>
-                            <iframe 
-                                className={styles.video}
-                                src={info?.video}
-                                frameBorder='0' 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                title='video'
-                            >
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-                {
-                    functionalitiesLength > 0 && 
-                    <div className={styles.frame}>
-                        <h2 data-aos="zoom-in-right" className={styles.sub_title}>Functionalities</h2>
-                        <div data-aos="zoom-in-left" className={styles.block2}>
-                        {
-                            functionalitiesLength > 0 && info?.functionalities?.map(func => {
-                                return (
-                                    <span className={styles.val}>{func}</span>
+                        functionalitiesLength > 0 && 
+                        <div className={styles.frame}>
+                            <h2 data-aos="zoom-in-right" className={styles.sub_title}>Functionalities</h2>
+                            <div data-aos="zoom-in-left" className={styles.block2}>
+                            {
+                                functionalitiesLength > 0 && info?.functionalities?.map((func, index) => {
+                                    return (
+                                        <span key={index} className={styles.val}>{func}</span>
                                     )
                                 })
-                        }
+                            }
+                            </div>
                         </div>
-                    </div>
-                }
-                {
-                    stepsLength > 0 && 
-                    <div className={styles.frame}>
-                        <h2 data-aos="zoom-out-up" className={styles.sub_title}>Steps</h2>
-                        <div data-aos="zoom-out-up" className={styles.block3}>
-                        {
-                            stepsLength > 0 &&
-                            info?.steps_to_start?.map(sts => {
-                                return (
-                                    <div className={styles.code_span}>
-                                        <h1 className={styles.step_des}><span className={styles.step_no}>{sts.no}.</span>{sts.description}</h1>
-                                        <p className={styles.code_block}><code className={styles.code}>{sts.code}</code></p>
-                                    </div>
-                                )
-                            })
-                        }
+                    }
+                    {
+                        stepsLength > 0 && 
+                        <div className={styles.frame}>
+                            <h2 data-aos="zoom-out-up" className={styles.sub_title}>Steps</h2>
+                            <div data-aos="zoom-out-up" className={styles.block3}>
+                            {
+                                stepsLength > 0 &&
+                                info?.steps_to_start?.map((sts, index) => {
+                                    return (
+                                        <div key={index} className={styles.code_span}>
+                                            <h1 className={styles.step_des}><span className={styles.step_no}>{sts.no}.</span>{sts.description}</h1>
+                                            <p className={styles.code_block}><code className={styles.code}>{sts.code}</code></p>
+                                        </div>
+                                    )
+                                })
+                            }
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

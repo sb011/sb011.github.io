@@ -1,23 +1,20 @@
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.css'
-import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import menu from '../public/menu.svg'
+
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
         function handleResize() {
-            // Set window width/height to state
             if(window.innerWidth > 1024)
                 setOpen(true)
           }
-          // Add event listener
           window.addEventListener("resize", handleResize);
-          // Call handler right away so state gets updated with initial window size
           handleResize();
-          // Remove event listener on cleanup
           return () => window.removeEventListener("resize", handleResize);
     }, [])
 

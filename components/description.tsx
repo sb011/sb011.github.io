@@ -6,8 +6,7 @@ const Description = () => {
             <h1  
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                className={styles.title}
-            >
+                className={styles.title}>
                 About me
             </h1>
             <p 

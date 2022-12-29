@@ -3,6 +3,7 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 4rem 5rem;
     overflow-x: hidden;
 }
@@ -75,9 +76,58 @@
     color: black;
     text-decoration-color: #E04345;
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .points {
     font-size: 1rem;
     display: list-item;
+}
+
+@media screen and (max-width: 1040px) { 
+    .excontainer {
+        padding: 1rem;
+        overflow: hidden;
+        min-height: auto;
+    }
+
+    .card {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        margin: 1.8rem 0 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    .company {
+        font-size: 1.2rem;
+    }
+
+    .title_company {
+        font-size: 1rem;
+    }
+
+    .dates {
+        font-size: 0.8rem;
+    }
+
+    .certificate {
+        font-size: 0.8rem;
+    }
+
+    .points {
+        font-size: 0.6rem;
+    }
+
+    .imgContainer {
+        width: 50%;
+    }
+
+    .info2 {
+        margin-left: 0;
+    }
 }
