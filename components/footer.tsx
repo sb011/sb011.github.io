@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '../styles/Footer.module.css'
 import linkedin from '../public/linkedin.svg'
-import github from '../public/github.svg'
+import github from '../public/GitHub.svg'
 import leetcode from '../public/leetcode.svg'
 import gfg from '../public/geeksforgeeks.svg'
 import codechef from '../public/codechef.svg'
@@ -23,10 +23,6 @@ const Footer = () => {
                 <div className={styles.card}>
                     <h1 className={styles.title}>Mobile no.</h1>
                     <h1 className={styles.val}>+91 95109 33403</h1>
-                </div>
-                <div className={styles.card}>
-                    <h1 className={styles.title}>Location</h1>
-                    <h1 className={styles.val}>Morbi, Gujarat, India</h1>
                 </div>
             </div>
             <p className={styles.resume}>Want to see my <Link className={styles.resumelink} href='https://drive.google.com/drive/folders/1_4crLqUCe9YD9mkvxfTgHSIzyp5oZcDV?usp=sharing' target='_blank'>Resume</Link>?</p>

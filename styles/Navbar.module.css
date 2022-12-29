@@ -48,3 +48,37 @@
     visibility: visible;
     transform: scaleX(1);
 }
+
+.menu {
+    display: none;
+}
+
+.menuCont {
+    display: none;
+}
+
+@media screen and (max-width: 1040px) {
+    .menuCont{
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .ul{
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 1rem 0;
+    }
+
+    .li {
+        margin: 0;
+        padding: 0.5rem;
+    }
+}

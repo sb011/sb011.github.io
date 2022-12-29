@@ -12,7 +12,6 @@ import NodeJS from '../public/NodeJS.svg'
 import ExpressJS from '../public/ExpressJS.svg'
 import Flask from '../public/Flask.svg'
 import GitHub from '../public/GitHub.svg'
-import AWS from '../public/aws.svg'
 import Link from 'next/link'
 
 const Skills = () => {
@@ -84,7 +83,7 @@ const Skills = () => {
                             <div>
                                 <h2 className={styles.certificate_title}>MongoDB Certified Developer, Associate (C100DEV)</h2>
                                 <h3 className={styles.certificate_issue}>Issued by MongoDB</h3>
-                                <Link className={styles.credentials} href='https://drive.google.com/file/d/1r7DSURYdTFKMHGNA0YdfgWDvSi1COm7m/view?usp=share_link' >Show credentials</Link>
+                                <Link className={styles.credentials} href='https://drive.google.com/file/d/1r7DSURYdTFKMHGNA0YdfgWDvSi1COm7m/view?usp=share_link' target='_blank' >Show credentials</Link>
                             </div>
                         </div>
                     </div>
