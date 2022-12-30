@@ -132,6 +132,7 @@ const Project = () => {
                                 info?.video &&
                                 <div data-aos="zoom-in-left" className={styles.block5}>
                                     <iframe 
+                                        loading='lazy'
                                         className={styles.video}
                                     src={info?.video}
                                         frameBorder='0' 
