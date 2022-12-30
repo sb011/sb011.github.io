@@ -27,7 +27,7 @@ const Contact = () => {
             if(!user_name || !user_email || !message){
                 return setErr('Please fill all the fields!')
             } 
-            await emailjs.sendForm(process.env.YOUR_SERVICE_ID, process.env.YOUR_TEMPLATE_ID, form.current, process.env.YOUR_PUBLIC_KEY)
+            await emailjs.sendForm('service_f8og2iz', 'template_4nqmtvc', form.current, '9gV4GyGGM5zXUv83j')
             setErr("Message Sent!!")
             setInfo({user_name: '', user_email: '', user_subject: '', message: ''});
         } catch (error: any) {
