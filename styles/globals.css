@@ -117,6 +117,7 @@ a {
 
 body{
   scroll-behavior: smooth;
+  font-size: 1rem;
 }
 
 * {
