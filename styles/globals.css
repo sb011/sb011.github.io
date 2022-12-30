@@ -115,9 +115,13 @@ a {
   font-style: normal;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body{
   scroll-behavior: smooth;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 * {
