@@ -72,6 +72,7 @@ const Project = () => {
                 <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
                 <meta name="keywords" content="smit, smit's portfolio, portfolio, smit bhoraniya, bhoraniya smit" />
+                <meta name="google-site-verification" content="db3Jm0LzFNjidddxajNLZTks7p5zACWOyczV7QyZvKg" />
             </Head>
             <div className={styles.main}>
                 <div className={styles.container}>
