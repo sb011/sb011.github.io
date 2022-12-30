@@ -23,51 +23,51 @@ const Skills = () => {
                     <div data-aos="zoom-in-down" className={styles.cont}>
                         <div className={styles.logos}>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={Clang} alt='C++ logo' />
+                                <Image loading="lazy" className={styles.logo} src={Clang} alt='C++ logo' />
                                 <h1 className={styles.header}>C++</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={Javascript} alt='Javascript logo' />
+                                <Image loading="lazy" className={styles.logo} src={Javascript} alt='Javascript logo' />
                                 <h1 className={styles.header}>Javascript</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={Python} alt='Python logo' />
+                                <Image loading="lazy" className={styles.logo} src={Python} alt='Python logo' />
                                 <h1 className={styles.header}>Python</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={HTML} alt='HTML logo' />
+                                <Image loading="lazy" className={styles.logo} src={HTML} alt='HTML logo' />
                                 <h1 className={styles.header}>HTML</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={CSS} alt='CSS logo' />
+                                <Image loading="lazy" className={styles.logo} src={CSS} alt='CSS logo' />
                                 <h1 className={styles.header}>CSS</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={MongoDB} alt='MongoDB logo' />
+                                <Image loading="lazy" className={styles.logo} src={MongoDB} alt='MongoDB logo' />
                                 <h1 className={styles.header}>MongoDB</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={MySQL} alt='MySQL logo' />
+                                <Image loading="lazy" className={styles.logo} src={MySQL} alt='MySQL logo' />
                                 <h1 className={styles.header}>MySQL</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={ReactJS} alt='ReactJS logo' />
+                                <Image loading="lazy" className={styles.logo} src={ReactJS} alt='ReactJS logo' />
                                 <h1 className={styles.header}>ReactJS</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={NodeJS} alt='NodeJS logo' />
+                                <Image loading="lazy" className={styles.logo} src={NodeJS} alt='NodeJS logo' />
                                 <h1 className={styles.header}>NodeJS</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={ExpressJS} alt='ExpressJS logo' />
+                                <Image loading="lazy" className={styles.logo} src={ExpressJS} alt='ExpressJS logo' />
                                 <h1 className={styles.header}>ExpressJS</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={Flask} alt='Flask logo' />
+                                <Image loading="lazy" className={styles.logo} src={Flask} alt='Flask logo' />
                                 <h1 className={styles.header}>Flask</h1>
                             </div>
                             <div className={styles.card}>
-                                <Image className={styles.logo} src={GitHub} alt='GitHub logo' />
+                                <Image loading="lazy" className={styles.logo} src={GitHub} alt='GitHub logo' />
                                 <h1 className={styles.header}>GitHub</h1>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ const Skills = () => {
                     <div data-aos="zoom-in-down" className={styles.content}>
                         <div className={styles.certificate}>
                             <div className={styles.certicard}>
-                                <Image className={styles.logo} src={MongoDB} alt='MongoDB logo' />
+                                <Image loading="lazy" className={styles.logo} src={MongoDB} alt='MongoDB logo' />
                             </div>
                             <div>
                                 <h2 className={styles.certificate_title}>MongoDB Certified Developer, Associate (C100DEV)</h2>

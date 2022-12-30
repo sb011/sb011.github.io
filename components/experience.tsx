@@ -11,7 +11,7 @@ const Experience = () => {
             <div className={styles.parts}>
                 <div data-aos="zoom-out-left" className={styles.card}>
                     <div className={styles.imgContainer}>
-                        <Image className={styles.img} src={ImgSrc} alt="amazon logo"/>
+                        <Image loading="lazy" className={styles.img} src={ImgSrc} alt="amazon logo"/>
                     </div>
                     <div className={styles.info2}>
                         <div className={styles.details}>
@@ -32,7 +32,7 @@ const Experience = () => {
                 </div>
                 <div data-aos="zoom-out-left" className={styles.card}>
                     <div className={styles.imgContainer}>
-                        <Image className={styles.img} src={ImgSrc2} alt="jpmc logo"/>
+                        <Image loading="lazy" className={styles.img} src={ImgSrc2} alt="jpmc logo"/>
                     </div>
                     <div className={styles.info2}>
                         <div className={styles.details}>

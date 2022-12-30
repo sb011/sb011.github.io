@@ -87,7 +87,7 @@ const Project = () => {
                                     info?.img.map((image, index) => {
                                         return (
                                             <motion.div className={styles.item} key={index}>
-                                                <img className={styles.projimg} src={image} alt='project photos' />
+                                                <img loading="lazy" className={styles.projimg} src={image} alt='project photos' />
                                             </motion.div>
                                         )
                                     })

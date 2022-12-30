@@ -21,7 +21,7 @@ const Navbar = () => {
     return (
         <div className={styles.nav}>
             <div className={styles.menuCont} onClick={() => setOpen(!open)}>
-                <Image className={styles.menu} src={menu} alt='navbar'/>
+                <Image loading="lazy" className={styles.menu} src={menu} alt='navbar'/>
             </div>
             {
                 open &&

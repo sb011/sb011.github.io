@@ -30,47 +30,47 @@ const Footer = () => {
                 <div className={styles.social}>
                     <div className={styles.iconcontainer}>
                         <Link href='https://www.linkedin.com/in/smit-bhoraniya-a071411b8/' target='_blank'>
-                            <Image className={styles.icons} src={linkedin} alt='linkedin' />
+                            <Image loading="lazy" className={styles.icons} src={linkedin} alt='linkedin' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://github.com/sb011' target='_blank'>
-                            <Image className={styles.icons} src={github} alt='github' />
+                            <Image loading="lazy" className={styles.icons} src={github} alt='github' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://leetcode.com/sb011/' target='_blank'>
-                            <Image className={styles.icons} src={leetcode} alt='leetcode' />
+                            <Image loading="lazy" className={styles.icons} src={leetcode} alt='leetcode' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://auth.geeksforgeeks.org/user/smitbhoraniya11/practice' target='_blank'>
-                            <Image className={styles.icons} src={gfg} alt='geeksforgeeks' />
+                            <Image loading="lazy" className={styles.icons} src={gfg} alt='geeksforgeeks' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://www.codechef.com/users/sb_011' target='_blank'>
-                            <Image className={styles.icons} src={codechef} alt='codechef' />
+                            <Image loading="lazy" className={styles.icons} src={codechef} alt='codechef' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://www.instagram.com/sb._.011/' target='_blank'>
-                            <Image className={styles.icons} src={instagram} alt='instagram' />
+                            <Image loading="lazy" className={styles.icons} src={instagram} alt='instagram' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://twitter.com/Smitbhoraniya11' target='_blank'>
-                            <Image className={styles.icons} src={twitter} alt='twitter' />
+                            <Image loading="lazy" className={styles.icons} src={twitter} alt='twitter' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://www.snapchat.com/add/sb0_11?share_id=rIS0ziPwiL4&locale=en-US' target='_blank'>
-                            <Image className={styles.icons} src={snapchat} alt='snapchat' />
+                            <Image loading="lazy" className={styles.icons} src={snapchat} alt='snapchat' />
                         </Link>
                     </div>
                     <div className={styles.iconcontainer}>
                         <Link href='https://www.facebook.com/smit.bhoraniya.90?mibextid=ZbWKwL' target='_blank'>
-                            <Image className={styles.icons} src={facebook} alt='facebook' />
+                            <Image loading="lazy" className={styles.icons} src={facebook} alt='facebook' />
                         </Link>
                     </div>
                 </div>
