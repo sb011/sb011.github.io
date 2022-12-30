@@ -19,17 +19,17 @@ const Projects = () => {
                 <motion.div ref={carousel} className={styles.carousel}>
                     <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
                         {
-                            images.map(img => {
+                            images.map((img, index) => {
                                 return (
-                                    <motion.div className={styles.item}>
+                                    <motion.div key={index} className={styles.item}>
                                         <img className={styles.projimg} src={img.img[0]} alt='project photos' />
                                         <div className={styles.info}>
                                             <h1 className={styles.projtitle}>{img.name}</h1>
                                             <div className={styles.techlist}>
                                                 {
-                                                    img.tech.map(t => {
+                                                    img.tech.map((t, index2) => {
                                                         return(
-                                                            <div className={styles.backtech}>
+                                                            <div key={index2} className={styles.backtech}>
                                                                 <span>{t}</span>
                                                             </div>
                                                         )

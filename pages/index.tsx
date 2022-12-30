@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Smit's Portfolio</title>
+        <title>Smit&apos;s Portfolio</title>
         <meta charSet="utf-8" />
         <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />

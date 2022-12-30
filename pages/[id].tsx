@@ -34,6 +34,7 @@ type proj = {
 }
 
 const Project = (props: any) => { 
+    const carousel = useRef<any>(null)
     const id = props.id
 
     const [info, setInfo] = useState<proj>()
@@ -41,17 +42,16 @@ const Project = (props: any) => {
     const [stepsLength, setStepsLength] = useState<any>(0);
     const [width, setWidth] = useState(0)
 
-    const carousel = useRef<any>(null)
 
     useEffect(() => {
         AOS.init({
           mirror: true,
           duration: 1000,
         });
-      }, [])
+    }, [])
 
     useEffect(() => {
-        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth )
+        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
     })
 
     useEffect(() => {
@@ -59,12 +59,12 @@ const Project = (props: any) => {
         setInfo(res);
         setFunctionalitiesLength(res?.functionalities?.length)
         setStepsLength(res?.steps_to_start?.length)
-    }, [])
+    }, [id])
 
     return (
         <>
             <Head>
-                <title>Smit's Portfolio</title>
+                <title>Smit&apos;s Portfolio</title>
                 <meta charSet="utf-8" />
                 <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
@@ -77,7 +77,7 @@ const Project = (props: any) => {
                             <div data-aos="fade-right" onClick={() => Router.back()} className={styles.back}>&lt;-</div>
                             <h1 data-aos="fade-left" className={styles.title}>{info?.name}</h1>
                         </div>
-                        <motion.div data-aos="fade-left" ref={carousel} className={styles.carousel}>
+                        <motion.div ref={carousel} data-aos="fade-left" className={styles.carousel}>
                             <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className={styles.inner_carousel}>
                                 {
                                     info?.img.map((image, index) => {

@@ -16,7 +16,7 @@ const Experience = () => {
                     <div className={styles.info2}>
                         <div className={styles.details}>
                             <h1 className={styles.company}>Amazon</h1>
-                            <h2 className={styles.title_company}>Amazon ML Summer School'22 - Apprenticeship</h2>
+                            <h2 className={styles.title_company}>Amazon ML Summer School&apos;22 - Apprenticeship</h2>
                             <h2 className={styles.dates}>July 2022 - July 2022</h2>
                             <Link className={styles.certificate} href="https://drive.google.com/file/d/1VjyrH3OTywtqrtzI6nQw_dlTfwBHJvpj/view" target="_blank">Certificate</Link>
                         </div>
