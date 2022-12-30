@@ -9,6 +9,7 @@ import Head from 'next/head'
 
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 import 'aos/dist/aos.css';
 
@@ -33,9 +34,11 @@ type proj = {
     video?: string
 }
 
-const Project = (props: any) => { 
+const Project = () => { 
+    const router = useRouter()
+    const { id } = router.query
+
     const carousel = useRef<any>(null)
-    const id = props.id
 
     const [info, setInfo] = useState<proj>()
     const [functionalitiesLength, setFunctionalitiesLength] = useState<any>(0);
@@ -178,10 +181,6 @@ const Project = (props: any) => {
             </div>
         </>
     )
-}
-
-export async function getServerSideProps ({params: {id}}: any) {
-    return { props: { id } };
 }
 
 export default Project
