@@ -9,9 +9,10 @@ import Skills from '../components/skills'
 import Projects from '../components/projects'
 import Contact from '../components/Contact'
 import Footer from '../components/footer'
-import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import { useEffect } from 'react'
 
 export default function Home() {
   useEffect(() => {
@@ -26,9 +27,9 @@ export default function Home() {
       <Head>
         <title>Smit's Portfolio</title>
         <meta charSet="utf-8" />
-        <meta name="description" content="Hello, I am Smit Bhoraniya, and everything about me is over here." />
+        <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-        <meta name="keywords" content="smit, smit's portfolio, portfolio" />
+        <meta name="keywords" content="smit, smit's portfolio, portfolio, smit bhoraniya, bhoraniya smit" />
       </Head>
       <main className={styles.main}>
         <Navbar />

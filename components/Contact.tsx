@@ -4,17 +4,17 @@ import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
 const Contact = () => {
-    const form = useRef<any>(null);
     const state = {
         user_name: '',
         user_email: '',
         user_subject: '',
         message: ''
     }
-
+    const form = useRef<any>(null);
+    
     const [info, setInfo] = useState(state)
-    const { user_name, user_email, user_subject, message } = info
     const [err, setErr] = useState('')
+    const { user_name, user_email, user_subject, message } = info
 
     const handleInputChange = (e: { target: { name: any; value: any } }) => {
         const { name, value } = e.target
@@ -26,8 +26,8 @@ const Contact = () => {
         try {
             if(!user_name || !user_email || !message){
                 return setErr('Please fill all the fields!')
-            }
-            await emailjs.sendForm('service_f8og2iz', 'template_4nqmtvc', form.current, '9gV4GyGGM5zXUv83j')
+            } 
+            await emailjs.sendForm(process.env.YOUR_SERVICE_ID, process.env.YOUR_TEMPLATE_ID, form.current, process.env.YOUR_PUBLIC_KEY)
             setErr("Message Sent!!")
             setInfo({user_name: '', user_email: '', user_subject: '', message: ''});
         } catch (error: any) {

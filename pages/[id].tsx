@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 
 
 type steps = {
-    no: Number,
+    no: number,
     description: String,
     code: String, 
 }
@@ -35,18 +35,17 @@ type proj = {
 
 const Project = (props: any) => { 
     const id = props.id
-    const [info, setInfo] = useState<proj>()
 
+    const [info, setInfo] = useState<proj>()
     const [functionalitiesLength, setFunctionalitiesLength] = useState<any>(0);
     const [stepsLength, setStepsLength] = useState<any>(0);
-
     const [width, setWidth] = useState(0)
+
     const carousel = useRef<any>(null)
 
     useEffect(() => {
         AOS.init({
           mirror: true,
-          anchorPlacement: 'top-bottom',
           duration: 1000,
         });
       }, [])
@@ -67,9 +66,9 @@ const Project = (props: any) => {
             <Head>
                 <title>Smit's Portfolio</title>
                 <meta charSet="utf-8" />
-                <meta name="description" content="Hello, I am Smit Bhoraniya, and everything about me is over here." />
+                <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-                <meta name="keywords" content="smit, smit's portfolio, portfolio" />
+                <meta name="keywords" content="smit, smit's portfolio, portfolio, smit bhoraniya, bhoraniya smit" />
             </Head>
             <div className={styles.main}>
                 <div className={styles.container}>
@@ -181,7 +180,7 @@ const Project = (props: any) => {
     )
 }
 
-export async function getServerSideProps ({params: {id}}) {
+export async function getServerSideProps ({params: {id}}: any) {
     return { props: { id } };
 }
 
