@@ -1,6 +1,6 @@
 import Typewriter from 'typewriter-effect'
 import styles from '../styles/Home.module.css'
-import ImgSrc from '../public/profile_pic.jpg'
+import ImgSrc from '../public/profile_pic.webp'
 import Image from 'next/image'
 
 const AboutMe = () => {
