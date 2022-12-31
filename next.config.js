@@ -12,7 +12,7 @@ const nextConfig = {
   ) {
     return {
       '/': { page: '/' },
-      '/instagram-clone': { page: '/[id]' },
+      '/insta-clone': { page: '/[id]' },
       '/bookmyseat': { page: '/[id]' },
       '/doctor-bot': { page: '/[id]' },
       '/nftmarketplace': { page: '/[id]' },
