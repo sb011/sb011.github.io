@@ -1,7 +1,7 @@
 export default [
     {
-        id: 'instagram-clone',
-        name: 'Instagram Clone',
+        id: 'insta-clone',
+        name: 'Insta Clone',
         link: 'https://github.com/sb011/instagram-clone.git',
         tech: ['ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Redux'],
         start_date: 'May 2021',
