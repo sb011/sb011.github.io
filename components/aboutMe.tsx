@@ -1,6 +1,7 @@
 import Typewriter from 'typewriter-effect'
 import styles from '../styles/Home.module.css'
 import ImgSrc from '../public/profile_pic.webp'
+import ImgSrc2 from '../public/profile_pic_mob.webp'
 import Image from 'next/image'
 
 const AboutMe = () => {
@@ -10,7 +11,7 @@ const AboutMe = () => {
                 data-aos="zoom-out-up"
                 data-aos-duration="2000"
                 className={styles.imgContainer}>
-                <Image className={styles.img} src={ImgSrc} alt="Profile Pic"/>
+                <Image priority sizes="(max-width: 480px) 480w, 1200px" className={styles.img} src={ImgSrc} alt="Profile Pic"/>
             </div>
             <div className={styles.me}>
                 <div 
