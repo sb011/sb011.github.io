@@ -25,11 +25,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Smit&apos;s Portfolio</title>
+        {/* <title>Smit&apos;s Portfolio</title> */}
+        {/* <link rel="icon" href="/SB.ico"/> */}
         <meta charSet="utf-8" />
-        <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="smit, smit's portfolio, portfolio, smit bhoraniya, bhoraniya smit" />
+        {/* <meta name="description" content="Freelancer, learner, and creative developer living in Gujarat." /> */}
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
+        {/* <meta name="keywords" content="smit, smit's portfolio, portfolio, smit bhoraniya, bhoraniya smit, sb011, portfolio" /> */}
         <meta name="google-site-verification" content="db3Jm0LzFNjidddxajNLZTks7p5zACWOyczV7QyZvKg" />
       </Head>
       <main className={styles.main}>
