@@ -10,7 +10,7 @@ const AboutMe = () => {
                 data-aos="zoom-out-up"
                 data-aos-duration="2000"
                 className={styles.imgContainer}>
-                <Image loading="lazy" className={styles.img} src={ImgSrc} alt="Profile Pic"/>
+                <Image className={styles.img} src={ImgSrc} alt="Profile Pic"/>
             </div>
             <div className={styles.me}>
                 <div 

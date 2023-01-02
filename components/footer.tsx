@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
             </div>
             <p className={styles.slog}>Created by Smit Bhoraniya🤔🌚</p>
-            <p className={styles.version}>Version 1.0.2</p>
+            <p className={styles.version}>Version 1.0.3</p>
         </div>
     )
 }

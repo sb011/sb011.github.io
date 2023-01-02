@@ -22,7 +22,7 @@ const Projects = () => {
                             images.map((img, index) => {
                                 return (
                                     <motion.div key={index} className={styles.item}>
-                                        <img className={styles.projimg} src={img.img[0]} alt='project photos' />
+                                        <img loading='lazy' className={styles.projimg} src={img.img[0]} alt='project photos' />
                                         <div className={styles.info}>
                                             <h1 className={styles.projtitle}>{img.name}</h1>
                                             <div className={styles.techlist}>
