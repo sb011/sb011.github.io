@@ -23,10 +23,6 @@ const Loading = ({setIsLoading}: any) => {
             }, 10);
         }
         pro();
-        
-        setTimeout(function() {
-            setIsLoading(false)
-        }, 3100)
     }, [progress])
 
     const barParent = {
@@ -67,9 +63,9 @@ const Loading = ({setIsLoading}: any) => {
     }
 
     return (
-        <motion.div className={styles.container}>
-            <motion.h1 variants={digits} animate="animate" className={styles.digits}>{progress}%</motion.h1>
-            <motion.div ref={ref} className={styles.progess_bar} variants={bar} animate="animate" />
+        <motion.div className={styles.container} >
+            <motion.h1 variants={digits} animate="animate" className={styles.digits} onAnimationComplete={() => setIsLoading(false)}>{progress}%</motion.h1>
+            <motion.div ref={ref} className={styles.progess_bar} variants={bar} animate="animate" onAnimationComplete={() => setIsLoading(false)} />
         </motion.div>
     )
 }

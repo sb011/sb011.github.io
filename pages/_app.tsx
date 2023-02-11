@@ -11,22 +11,22 @@ export default function App({ Component, pageProps }: AppProps) {
     console.log(isloading);
   }, [isloading])
 
-  
+
   const exitanimate = {
     animate: {
-        transition: {
-            delay: 10,
-            duration: 10,
-            when: "afterChildren"
-        }
+      transition: {
+        delay: 10,
+        duration: 10,
+        when: "afterChildren"
+      }
     }
   }
 
   return <>
-    <SEO 
+    <SEO
       title="Smit Bhoraniya"
       description="Freelancer, learner, and creative developer living in Gujarat."
-      keywords={["smit", "smit's portfolio", "portfolio", "smit bhoraniya", "bhoraniya smit", "sb011", "portfolio websites", "top portfolio websites", "best portfolio websites", "best portfolio", "smit portfolio", "best portfolio design", "portfolio design", "portfolio design ideas", ]}
+      keywords={["smit", "smit's portfolio", "portfolio", "smit bhoraniya", "bhoraniya smit", "sb011", "portfolio websites", "top portfolio websites", "best portfolio websites", "best portfolio", "smit portfolio", "best portfolio design", "portfolio design", "portfolio design ideas",]}
       icon="/SB.ico"
       facebook={{
         image: "/profile_pic.webp",
@@ -34,18 +34,16 @@ export default function App({ Component, pageProps }: AppProps) {
         type: "website",
       }}
       twitter={{
-          image: "/profile_pic.webp",
-          site: "@Smitbhoraniya11",
-          card: "summary",
+        image: "/profile_pic.webp",
+        site: "@Smitbhoraniya11",
+        card: "summary",
       }}
     />
     <AnimatePresence>
-      <div className="main">
       {
         isloading ? <Loading setIsLoading={setIsLoading} />
-        : <Component {...pageProps} />
+          : <Component {...pageProps} />
       }
-      </div>
     </AnimatePresence>
   </>
 }
