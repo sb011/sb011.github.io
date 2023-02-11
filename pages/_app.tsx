@@ -1,8 +1,27 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import SEO from "@bradgarropy/next-seo"
+import { useState, useEffect } from 'react';
+import Loading from '../components/loading';
+import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [isloading, setIsLoading] = useState(true);
+  useEffect(() => {
+    console.log(isloading);
+  }, [isloading])
+
+  
+  const exitanimate = {
+    animate: {
+        transition: {
+            delay: 10,
+            duration: 10,
+            when: "afterChildren"
+        }
+    }
+  }
+
   return <>
     <SEO 
       title="Smit Bhoraniya"
@@ -20,6 +39,13 @@ export default function App({ Component, pageProps }: AppProps) {
           card: "summary",
       }}
     />
-    <Component {...pageProps} />
+    <AnimatePresence>
+      <div className="main">
+      {
+        isloading ? <Loading setIsLoading={setIsLoading} />
+        : <Component {...pageProps} />
+      }
+      </div>
+    </AnimatePresence>
   </>
 }
