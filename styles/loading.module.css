@@ -1,14 +1,16 @@
 .container {
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
     display:flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     overflow-x: hidden;
     overflow-y: hidden;
+    align-items: center;
 }
 
 .digits {
+    position: absolute;
     font-size: 15rem;
     margin-left: 2rem;
 }

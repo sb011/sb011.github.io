@@ -45,7 +45,7 @@ const Loading = ({setIsLoading}: any) => {
 
     const bar = {
         animate: {
-            height: "100vh",
+            height: "100%",
             opacity: 0,
             transition: {
                 ease: "easeInOut",
@@ -60,7 +60,7 @@ const Loading = ({setIsLoading}: any) => {
             opacity: 0,
             transition: {
                 ease: "easeInOut",
-                delay: 2.1,
+                delay: 2,
                 duration: 1
             }
         }
