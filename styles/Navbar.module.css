@@ -10,17 +10,21 @@
 }
 
 .menuCont{
-    display:contents;
+    display: contents;
     cursor: pointer;
 }
 
 .menu {
-    width: 3rem;
-    height: 3rem;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 4rem;
+    height: 4rem;
     position: absolute;
     top: 2rem;
     right: 2rem;
     z-index: 11;
+    padding: 0.6rem;
+    border-radius: 10px;
 }
 
 .list {
@@ -79,5 +83,9 @@
 @media screen and (max-width: 1040px) { 
     .li {
         font-size: 150%;
+    }
+    .menu {
+        width: 3rem;
+        height: 3rem;
     }
 }

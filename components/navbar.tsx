@@ -70,7 +70,7 @@ const Navbar = () => {
     return (
         <div className={styles.nav}>
             <motion.div initial={false} animate={open ? "open" : "closed"} className={styles.menuCont} onClick={() => setOpen(!open)}>
-                <svg className={styles.menu} viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.menu} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <Path 
                         variants={{
                             open: { x1: 21, y1: 3, x2: 3, y2: 21 },

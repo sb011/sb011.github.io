@@ -54,6 +54,7 @@ const Loading = ({setIsLoading}: any) => {
     const digits = {
         animate: {
             opacity: 0,
+            color: "rgb(255, 255, 255)",
             transition: {
                 ease: "easeInOut",
                 delay: 2,
