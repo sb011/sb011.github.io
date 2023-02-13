@@ -48,10 +48,10 @@
 
 .li {
     margin-left: 2rem;
-    font-size: 3rem;
 }
 
 .link {
+    font-size: 3rem;
     color: black;
     text-decoration: none;
     position: relative;
