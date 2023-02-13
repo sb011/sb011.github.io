@@ -17,8 +17,8 @@
 .menu {
     background: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -48,7 +48,7 @@
 
 .li {
     margin-left: 2rem;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .link {
