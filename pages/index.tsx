@@ -39,7 +39,7 @@ export default function Home() {
         <div className={styles.content}>
           <AboutMe />
           <Description />
-          <Education />
+          {/* <Education /> */}
           <Experience />
           <Skills />
           <Projects />
