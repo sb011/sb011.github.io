@@ -40,12 +40,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1.5rem;
     border-bottom: 1px solid #4A4846;
 }
 
 .projtitle {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
 }
 
 .skills {
@@ -59,7 +59,7 @@
 .skill {
     border: 1px solid #4A4846;
     padding: 0.5rem 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 50px;
     background: white;
     color: black;
