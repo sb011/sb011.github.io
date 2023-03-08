@@ -48,12 +48,14 @@ const AboutMe = () => {
             <motion.div variants={lines} initial="init2" animate="animate" className={styles.line}></motion.div>
           </motion.div>
         </motion.div>
-        <div className={styles.titles}>
-          <h5 className={styles.title}>Software Engineer</h5>
-          <h5 className={styles.title}>Freelancer</h5>
-          <h5 className={styles.title}>Developer</h5>
-          <h5 className={styles.title}>Designer</h5>
-        </div>
+        {/* <motion.div className={styles.titlesCont}>
+          <div className={styles.conta}>
+            <motion.h5 className={styles.title}>Software Engineer</motion.h5>
+            <motion.h5 className={styles.title}>Freelancer</motion.h5>
+            <motion.h5 className={styles.title}>Developer</motion.h5>
+            <motion.h5 className={styles.title}>Designer</motion.h5>
+          </div>
+        </motion.div> */}
       </motion.div>
     )
 }
