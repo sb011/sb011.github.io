@@ -104,9 +104,9 @@ const Navbar = () => {
                         <motion.li variants={liItem} className={styles.li} onClick={() => setOpen(!open)}>
                             <Link className={styles.link} href="#aboutme">About me</Link>
                         </motion.li>
-                        <motion.li variants={liItem} className={styles.li} onClick={() => setOpen(!open)}>
+                        {/* <motion.li variants={liItem} className={styles.li} onClick={() => setOpen(!open)}>
                             <Link className={styles.link} href="#education">Education</Link>
-                        </motion.li>
+                        </motion.li> */}
                         <motion.li variants={liItem} className={styles.li} onClick={() => setOpen(!open)}>
                             <Link className={styles.link} href="#experience">Experience</Link>
                         </motion.li>

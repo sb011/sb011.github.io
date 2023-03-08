@@ -1,57 +1,60 @@
-import Typewriter from 'typewriter-effect'
 import styles from '../styles/Home.module.css'
-import ImgSrc from '../public/profile_pic.webp'
-import ImgSrc2 from '../public/profile_pic_mob.webp'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const AboutMe = () => {
+  var name = {
+    init: {
+      y: "100%"
+    },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+        delay: 1
+      }
+    }
+  }
+
+  var lines = {
+    init: {
+      x: "-100%"
+    },
+    init2: {
+      x: "100%"
+    },
+    animate: {
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut"
+      }
+    }
+  }
+
     return (
-        <div id='top' className={styles.mainContainer}>
-            <div
-                data-aos="zoom-out-up"
-                data-aos-duration="2000"
-                className={styles.imgContainer}>
-                <Image priority sizes="(max-width: 480px) 480w, 1200px" className={styles.img} src={ImgSrc} alt="Profile Pic"/>
-            </div>
-            <div className={styles.me}>
-                <div 
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                    className={styles.line1}>
-                    <Typewriter options={{
-                        autoStart: true,
-                        loop: true,
-                        delay: 50,
-                        strings: [
-                        "Hello,",
-                        "नमस्ते,",
-                        "નમસ્તે,",
-                        "Hola,",
-                        "Bonjour,",
-                        "Ciao,",
-                        "こんにちは,",
-                        "안녕,",
-                        "Salve,",
-                        "Привет,",
-                        "你好",
-                        "ہیلو",
-                        ]
-                    }} />
-                </div>
-                <div
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                    className={styles.line2}>
-                    <h1 className={styles.iam}>I am</h1>
-                </div>
-                <div
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                    className={styles.line3}>
-                    <h1 className={styles.iam}>S<span className={styles.second_font}>MI</span>T B<span className={styles.second_font}>HORAN</span>I<span className={styles.second_font}>Y</span>A</h1>
-                </div>
-            </div>
+      <motion.div className={styles.mainContainer}>
+        <motion.div className={styles.me}>
+          <motion.div className={styles.wordContainer}>
+            <motion.div variants={name} initial="init" animate="animate" className={styles.box}>
+              <motion.h1 className={styles.name}>Smit</motion.h1>
+            </motion.div>
+            <motion.div variants={lines} initial="init" animate="animate" className={styles.line}></motion.div>
+          </motion.div>
+          <motion.div className={styles.wordContainer}>
+            <motion.div variants={name} initial="init" animate="animate" className={styles.box}>
+              <motion.h1 className={styles.name}>Bhoraniya</motion.h1>
+            </motion.div>
+            <motion.div variants={lines} initial="init2" animate="animate" className={styles.line}></motion.div>
+          </motion.div>
+        </motion.div>
+        <div className={styles.titles}>
+          <h5 className={styles.title}>Software Engineer</h5>
+          <h5 className={styles.title}>Freelancer</h5>
+          <h5 className={styles.title}>Developer</h5>
+          <h5 className={styles.title}>Designer</h5>
         </div>
+      </motion.div>
     )
 }
 

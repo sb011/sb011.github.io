@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 1040px) { 
     .link {
-        font-size: 150%;
+        font-size: 7rem;
     }
     .menu {
         width: 3rem;

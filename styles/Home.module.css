@@ -1,72 +1,99 @@
-
-.main {
-  display: flex;
-  font-size: 2rem;
-  height: 100vh;
-  width: 100%;
-}
-
-.content{
-  width: 100%;
-  height: 100%;
-}
-
 .mainContainer{
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.imgContainer{
-  height: 100%;
-  width: 50%;
-}
-
-.img{
+.main {
+  display: flex;
+  height: 100vh;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
-
 .me{
   height: 100%;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   font-size: 3.5rem;
 }
 
-.second_font {
-  font-family: Custom2Font, monospace;
-  text-transform: uppercase;
-  margin-top: 0.2rem;
+.wordContainer {
+  width: 100%;
+  overflow: hidden;
 }
 
-.iam {
-  font-size: 3rem;
-  font-weight: normal;
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
+
+.name {
+  padding: 0 0 0 1rem;
+  margin: 0;
+  font-size: 12rem;
+  width: 100%;
+  height: auto;
+  font-weight: bolder;
+  position: relative;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background: #4A4846;
+}
+
+.titles {
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.title {
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #000000c2, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
 
 @media screen and (max-width: 1040px) {
   .mainContainer {
-    flex-direction: column;
+    height: 100%;
+    width: 100%;
   }
 
   .imgContainer {
     width: 100%;
     height: 50%;
-    /* order: 1; */
   }
 
   .me {
     width: 100%;
-    font-size: 1.5rem;
-  }
-
-  .iam {
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
   }
 }
