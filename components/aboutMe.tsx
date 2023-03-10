@@ -32,32 +32,33 @@ const AboutMe = () => {
     }
   }
 
-    return (
-      <motion.div className={styles.mainContainer}>
-        <motion.div className={styles.me}>
-          <motion.div className={styles.wordContainer}>
-            <motion.div variants={name} initial="init" animate="animate" className={styles.box}>
-              <motion.h1 className={styles.name}>Smit</motion.h1>
-            </motion.div>
-            <motion.div variants={lines} initial="init" animate="animate" className={styles.line}></motion.div>
+  return (
+    <div className={styles.mainContainer}>
+      <div className={styles.me}>
+        <div className={styles.wordContainer}>
+          <motion.div variants={name} initial="init" animate="animate" className={styles.box}>
+            <h1 className={styles.myname}>Smit</h1>
           </motion.div>
-          <motion.div className={styles.wordContainer}>
-            <motion.div variants={name} initial="init" animate="animate" className={styles.box}>
-              <motion.h1 className={styles.name}>Bhoraniya</motion.h1>
-            </motion.div>
-            <motion.div variants={lines} initial="init2" animate="animate" className={styles.line}></motion.div>
+          <motion.div variants={lines} initial="init" animate="animate" className={styles.line}></motion.div>
+        </div>
+        <div className={styles.wordContainer}>
+          <motion.div variants={name} initial="init" animate="animate" className={styles.box}>
+            <h1 className={styles.myname}>Bhoraniya</h1>
           </motion.div>
-        </motion.div>
-        {/* <motion.div className={styles.titlesCont}>
-          <div className={styles.conta}>
-            <motion.h5 className={styles.title}>Software Engineer</motion.h5>
-            <motion.h5 className={styles.title}>Freelancer</motion.h5>
-            <motion.h5 className={styles.title}>Developer</motion.h5>
-            <motion.h5 className={styles.title}>Designer</motion.h5>
-          </div>
-        </motion.div> */}
-      </motion.div>
-    )
+          <motion.div variants={lines} initial="init2" animate="animate" className={styles.line}></motion.div>
+        </div>
+      </div>
+      <div className={styles.cardContent}>
+
+      </div>
+      <div className={styles.titlesCont}>
+        <h5 className={styles.titleItem}>Software Engineer</h5>
+        <h5 className={styles.titleItem}>Freelancer</h5>
+        <h5 className={styles.titleItem}>Developer</h5>
+        <h5 className={styles.titleItem}>Designer</h5>
+      </div>
+    </div>
+  )
 }
 
 export default AboutMe

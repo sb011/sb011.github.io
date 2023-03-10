@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import SEO from "@bradgarropy/next-seo"
 import { useState, useEffect } from 'react';
 import Loading from '../components/loading';
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isloading, setIsLoading] = useState(true);

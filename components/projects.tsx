@@ -115,14 +115,14 @@ const Projects = () => {
 
     return (
         <div id='projects' className={styles.container}>
-            <motion.h1 variants={title} initial="init" whileInView="inView" exit="exit" className={styles.title}>Projects</motion.h1>
-            <motion.div variants={list} initial="init" whileInView="inView" exit="exit" className={styles.projectsList}>
+            <motion.h1 viewport={{ once: true }} variants={title} initial="init" whileInView="inView" exit="exit" className={styles.title}>Projects</motion.h1>
+            <motion.div viewport={{ once: true }} variants={list} initial="init" whileInView="inView" exit="exit" className={styles.projectsList}>
                 {
                     images.map((img, index) => {
                         return (
                             <Link href={`/${img.id}`} key={index} className={styles.link}>
-                                <motion.div variants={liItem} initial="init" whileInView="inView" exit="exit" className={styles.projectCont}>
-                                <motion.div variants={hover} initial="init" whileHover="animate" exit="exit" className={styles.project}>
+                                <motion.div viewport={{ once: true }} variants={liItem} initial="init" whileInView="inView" exit="exit" className={styles.projectCont}>
+                                <motion.div viewport={{ once: true }} variants={hover} initial="init" whileHover="animate" exit="exit" className={styles.project}>
                                     <span className={styles.projtitle}>{img.name}</span>
                                     <div className={styles.skills}>
                                     {

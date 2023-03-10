@@ -62,12 +62,15 @@ const Description = () => {
                     initial="init"
                     whileInView="inView"
                     exit="exit"
+                    viewport={{ once: true }}
                     className={styles.title}>
                     About me
                 </motion.h1>
                 <motion.p
                     variants={container} initial="init" whileInView="inView"
-                    className={styles.des}>
+                    className={styles.des}
+                    viewport={{ once: true }}
+                    >
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am a software engineer with a passion for creating innovative solutions to complex problems. With my expertise in coding and programming, I strive to develop software that not only meets the needs of users, but also enhances their daily lives. I am excited to be part of this ever-evolving technological world, where possibilities are endless and innovation is key.
                 </motion.p>
             </div>

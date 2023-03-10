@@ -58,7 +58,7 @@ const Experience = () => {
     }
     return (
         <div id='experience' className={styles.excontainer}>
-            <motion.div variants={main} initial="init" whileInView="inView" className={styles.background}>
+            <motion.div viewport={{ once: true }} variants={main} initial="init" whileInView="inView" className={styles.background}>
                 <motion.div className={styles.titleCont}>
                     <motion.h1 variants={title} className={styles.title}>Experience</motion.h1>
                 </motion.div>

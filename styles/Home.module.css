@@ -1,3 +1,17 @@
+/* ----------Full Page----------- */
+.main {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ----------Home Page----------- */
  .mainContainer{
   height: 100%;
   width: 100%;
@@ -5,11 +19,6 @@
   flex-direction: column;
 }
 
-.main {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
 .me{
   height: 100%;
   width: 100%;
@@ -31,7 +40,7 @@
   width: 100%;
 }
 
-.name {
+.myname {
   padding: 0 0 0 1rem;
   /* margin: 0; */
   font-size: 12rem;
@@ -50,22 +59,31 @@
   font-weight: 500;
   opacity: 0.8;
   font-size: 1.5rem;
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0.5rem;
 }
 
-.title {
+.titleItem {
   position: relative;
   text-transform: uppercase;
   overflow: hidden;
   background: linear-gradient(90deg, #000, #000000c2, #000);
   background-repeat: no-repeat;
-  background-size: 50%;
-  animation: animate 5s linear infinite;
-  -webkit-background-clip: text;
+  background-size: 75%;
+  animation: animate 3s linear infinite;
+  background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+.cardContent {
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 8%, transparent 8%);
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 @keyframes animate {
@@ -79,24 +97,25 @@
 
 
 @media screen and (max-width: 1040px) {
-  .mainContainer {
-    height: 100vh;
-    /* width: 100%; */
-  }
-
-  .imgContainer {
-    width: 100%;
+  .titlesCont {
+    flex-direction: column;
     height: 50%;
+    align-items: center;
+    justify-content: flex-end;
   }
 
-  .name {
-    font-size: 2rem;
+  .titleItem {
+    font-size: 1.5rem;
+  }
+
+  .myname {
+    font-size: 4rem;
   }
 
   .me {
-    width: 100%;
+    height: 50%;
     align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+    justify-content: flex-start;
+    margin-top: 6rem;
   }
 }
