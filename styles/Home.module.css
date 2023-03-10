@@ -101,7 +101,7 @@
     flex-direction: column;
     height: 50%;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .titleItem {
